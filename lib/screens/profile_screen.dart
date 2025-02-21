@@ -15,7 +15,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Access the ThemeNotifier from Provider.
+    // Access the ThemeNotifier from Provider
     final themeNotifier = Provider.of<ThemeNotifier>(context);
 
     return Scaffold(
@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             // Profile Picture + Name
             const CircleAvatar(
               radius: 40,
-              backgroundImage: AssetImage('assets/placeholder.png'),
+              backgroundImage: AssetImage('assets/images/placeholder.png'),
             ),
             const SizedBox(height: 10),
             const Text(
@@ -92,21 +92,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               },
             ),
             const SizedBox(height: 20),
-            // Logout Button
+            // Logout
             ElevatedButton.icon(
               onPressed: () {
-                // Handle logout logic
+                // Handle logout
               },
               icon: const Icon(Icons.logout),
               label: const Text('Logout'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
               ),
-            ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
 
